@@ -1,18 +1,16 @@
 /*eslint-disable*/
 const JobCard = ({ job }) => {
   var tags = [job.role, job.level, ...job.languages, ...job.tools];
-  const loc = job.logo;
-
   return (
     <div
-      className={`flex items-center justify-between px-5 py-4 my-8 shadow-lg font-leagueSpartan ${
+      className={`flex items-center justify-between px-5 py-3 my-8 shadow-lg font-leagueSpartan ${
         job.featured && "border-l-4 border-DesaturatedDarkCyan"
       }`}
     >
       <div className="flex items-center justify-center gap-4">
-        <div className="w-20 h-20 rounded-full bg-DesaturatedDarkCyan">
+        <div className="w-16 h-16 rounded-full bg-DesaturatedDarkCyan">
           <img
-            src={require(loc)}
+            src={job.logo}
             alt="company"
             className="object-cover w-full h-full rounded-full"
           />
@@ -33,7 +31,7 @@ const JobCard = ({ job }) => {
               </p>
             )}
           </div>
-          <h3 className="text-xl font-bold capitalize text-VeryDarkGrayishCyan">
+          <h3 className="text-lg font-bold capitalize text-VeryDarkGrayishCyan">
             {job.position}
           </h3>
           <div className="flex items-center justify-center gap-4 text-sm text-DarkGrayishCyan">
