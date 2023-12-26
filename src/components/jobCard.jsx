@@ -1,5 +1,5 @@
 /*eslint-disable*/
-const JobCard = ({ job }) => {
+const JobCard = ({ job, handleUpdateFilter }) => {
   var tags = [job.role, job.level, ...job.languages, ...job.tools];
   return (
     <div
@@ -46,6 +46,7 @@ const JobCard = ({ job }) => {
           <p
             className="px-2 py-1 duration-500 rounded-lg shadow-md cursor-pointer shadow-LightGrayishCyan bg-LightGrayishCyan2 hover:text-white hover:bg-DesaturatedDarkCyan"
             key={_}
+            onClick={() => handleUpdateFilter(lang)}
           >
             {lang}
           </p>
