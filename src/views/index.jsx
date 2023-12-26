@@ -26,7 +26,7 @@ const JobLists = () => {
           className="object-cover w-full h-full md:hidden"
         />
         {filters.length > 0 && (
-          <div className="absolute bottom-0 flex items-center justify-between w-2/3 h-20 px-4 mb-4 -translate-x-1/2 translate-y-1/2 rounded-md shadow-xl bg-LightGrayishCyan left-1/2">
+          <div className="absolute bottom-0 flex items-center justify-between w-11/12 px-4 py-2 -translate-x-1/2 translate-y-1/2 rounded-md shadow-xl min-h-20 md:h-20 md:w-2/3 bg-LightGrayishCyan left-1/2">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {filters.map((tag, _) => (
                 <div
@@ -62,7 +62,7 @@ const JobLists = () => {
           </div>
         )}
       </div>
-      <div className="max-w-[1100px] mx-auto px-2">
+      <div className="max-w-[1100px] mx-auto px-2 pt-14 md:pt-8">
         {taggedJobs.map((job, _) => (
           <JobCard key={_} job={job} handleUpdateFilter={handleUpdateFilter} />
         ))}
