@@ -15,7 +15,7 @@ const JobLists = () => {
           className="object-cover w-full h-full md:hidden"
         />
       </div>
-      <div className="max-w-[1100px] mx-auto">
+      <div className="max-w-[1100px] mx-auto px-2">
         {jobs.map((job, _) => (
           <JobCard key={_} job={job} />
         ))}
