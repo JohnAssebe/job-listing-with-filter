@@ -1,5 +1,6 @@
+import JobLists from "./views";
 function App() {
-  return <div></div>;
+  return <JobLists />;
 }
 
 export default App;
